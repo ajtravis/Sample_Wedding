@@ -27,4 +27,3 @@ class SignUpForm(FlaskForm):
     is_coming = BooleanField('is_coming', validators=[DataRequired()])
     num_guests = IntegerField('num_guests', validators=[DataRequired()])
     message = StringField('message')
-
