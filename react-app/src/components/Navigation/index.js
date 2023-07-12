@@ -2,9 +2,11 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import './Navigation.css';
 
 function Navigation({ isLoaded }) {
+	const history = useHistory()
 
 	return (
 		<div id='nav-menu'>
@@ -26,7 +28,7 @@ function Navigation({ isLoaded }) {
 				</span>
 			</div>
 			<div className='nav-right'>
-				<div className='rsvp'>RSVP</div>
+				<div className='rsvp' onClick={() => history.push('/rsvp') }>RSVP</div>
 			</div>
 		</div>
 	);

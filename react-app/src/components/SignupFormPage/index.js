@@ -6,24 +6,25 @@ import './SignupForm.css';
 
 function SignupFormPage() {
   const dispatch = useDispatch();
-  const sessionUser = useSelector((state) => state.session.user);
   const [email, setEmail] = useState("");
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [isComing, setisComing] = useState(false);
+  const [numGuests, setNumGuests] = useState(0);
+  const [message, setMessage] = useState("");
   const [errors, setErrors] = useState([]);
 
   if (sessionUser) return <Redirect to="/" />;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (password === confirmPassword) {
-        const data = await dispatch(signUp(username, email, password));
-        if (data) {
-          setErrors(data)
-        }
-    } else {
-        setErrors(['Confirm Password field must be the same as the Password field']);
+
+    const data = await dispatch(signUp({ firstName, lastName, email, isComing, numGuests, message }));
+    if (data) {
+      setErrors(data)
+    }
+    else {
+      setErrors(['Confirm Password field must be the same as the Password field']);
     }
   };
 
@@ -44,33 +45,38 @@ function SignupFormPage() {
           />
         </label>
         <label>
-          Username
+          First Name
           <input
             type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
             required
           />
         </label>
         <label>
-          Password
+          Last Name
           <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            type="text"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
             required
           />
         </label>
         <label>
-          Confirm Password
+          Number of guests.
           <input
-            type="password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            required
+            type="number"
+            min={0}
+            step={1}
+            value={numGuests}
+            onChange={(e) => setNumGuests(e.target.value)}
+          // required
           />
         </label>
-        <button type="submit">Sign Up</button>
+        <textarea value={message}
+          onChange={(e) => setMessage(e.target.value)} />
+
+        <button type="submit">submit</button>
       </form>
     </>
   );
