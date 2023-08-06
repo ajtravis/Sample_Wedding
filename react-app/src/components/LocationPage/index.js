@@ -5,4 +5,4 @@ function LocationPage() {
 	);
 }
 
-export default Home;
+export default LocationPage;
