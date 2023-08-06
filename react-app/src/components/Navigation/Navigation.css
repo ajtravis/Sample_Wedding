@@ -1,5 +1,5 @@
 .profile-dropdown {
-  position: absolute;
+  position: fixed;
 }
 
 .hidden {
@@ -64,4 +64,8 @@ a:hover{
 
 span{
   margin: 1em;
+}
+
+#all-content{
+ padding-top: 5em;
 }

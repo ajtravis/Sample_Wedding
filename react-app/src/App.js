@@ -17,8 +17,8 @@ function App() {
 
   return (
     <>
-
-      <Navigation isLoaded={isLoaded} />
+      <Navigation id="navs" isLoaded={isLoaded} />
+      <div id="all-content">
       {isLoaded && (
         <Switch>
           <Route path="/rsvp">
@@ -32,6 +32,7 @@ function App() {
           </Route>
         </Switch>
       )}
+      </div>
     </>
   );
 }
