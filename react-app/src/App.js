@@ -24,6 +24,9 @@ function App() {
           <Route path="/rsvp">
             <SignupFormPage />
           </Route>
+          <Route exact path="/location">
+            <LocationPage />
+          </Route>
           <Route exact path="/">
             <Home />
           </Route>
