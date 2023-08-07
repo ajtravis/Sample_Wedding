@@ -18,7 +18,7 @@ function Navigation({ isLoaded }) {
 					<NavLink to='/'>Our Story</NavLink>
 				</span>
 				<span>
-					<NavLink to='/'>Location and Hotels</NavLink>
+					<NavLink to='/location'>Location and Hotels</NavLink>
 				</span>
 				<span>
 					<NavLink to='/'>More Info</NavLink>

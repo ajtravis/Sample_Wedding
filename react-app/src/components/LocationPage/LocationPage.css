@@ -6,8 +6,15 @@
 #map-page {
     background-color: #fce4ec;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 }
 
-#all-content{
-
+#l-content{
+    display:flex;
 }
+
+l-info
