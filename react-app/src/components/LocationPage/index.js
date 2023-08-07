@@ -9,6 +9,7 @@ function LocationPage() {
 	}
 
 	return (
+		<div id="map-page">
 		<div id='map'>
 			<GoogleMapReact
 				bootstrapURLKeys={{
@@ -21,6 +22,7 @@ function LocationPage() {
 
 			>
 			</GoogleMapReact>
+		</div>
 		</div>
 	);
 }
