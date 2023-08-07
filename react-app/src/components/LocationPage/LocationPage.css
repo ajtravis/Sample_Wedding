@@ -1,6 +1,6 @@
 #map{
-    width: 400px;
-    height: 400px;
+    width: 60vw;
+    height: 40em;
 }
 
 #map-page {
@@ -17,4 +17,10 @@
     display:flex;
 }
 
-l-info
+l-info {
+
+}
+
+.marker {
+    background: red;
+}

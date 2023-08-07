@@ -7,6 +7,7 @@ import { authenticate } from "./store/session";
 import Navigation from "./components/Navigation";
 import Home from "./components/HomePage"
 import LocationPage from "./components/LocationPage"
+import PhotoGallery from "./components/PhotoGallery";
 
 function App() {
   const dispatch = useDispatch();
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <Route exact path="/location">
             <LocationPage />
+          </Route>
+          <Route exact path="/photos">
+            <PhotoGallery />
           </Route>
           <Route exact path="/">
             <Home />

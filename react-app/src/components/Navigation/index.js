@@ -21,10 +21,10 @@ function Navigation({ isLoaded }) {
 					<NavLink to='/location'>Location and Hotels</NavLink>
 				</span>
 				<span>
-					<NavLink to='/'>More Info</NavLink>
+					<NavLink to='/photos'>Photos</NavLink>
 				</span>
 				<span>
-					<NavLink to='/'>Registry</NavLink>
+					<NavLink to='/' >Registry</NavLink>
 				</span>
 			</div>
 			<div className='nav-right'>
