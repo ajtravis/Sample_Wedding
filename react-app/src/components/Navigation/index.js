@@ -15,7 +15,7 @@ function Navigation({ isLoaded }) {
 					<NavLink exact to="/">Home</NavLink>
 				</span>
 				<span>
-					<NavLink to='/'>Our Story</NavLink>
+					<NavLink to='/story'>Our Story</NavLink>
 				</span>
 				<span>
 					<NavLink to='/location'>Location and Hotels</NavLink>

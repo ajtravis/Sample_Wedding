@@ -5,9 +5,10 @@ import SignupFormPage from "./components/SignupFormPage";
 import LoginFormPage from "./components/LoginFormPage";
 import { authenticate } from "./store/session";
 import Navigation from "./components/Navigation";
-import Home from "./components/HomePage"
-import LocationPage from "./components/LocationPage"
+import Home from "./components/HomePage";
+import LocationPage from "./components/LocationPage";
 import PhotoGallery from "./components/PhotoGallery";
+import StoryPage from "./components/StoryPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -22,6 +23,9 @@ function App() {
       <div id="all-content">
       {isLoaded && (
         <Switch>
+          <Route exact path="/story">
+            <StoryPage />
+          </Route>
           <Route path="/rsvp">
             <SignupFormPage />
           </Route>
