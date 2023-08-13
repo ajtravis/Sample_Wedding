@@ -8,6 +8,10 @@ import './Navigation.css';
 function Navigation({ isLoaded }) {
 	const history = useHistory()
 
+	const registry = () => {
+		window.alert("link to your registry here")
+	}
+
 	return (
 		<div id='nav-menu'>
 			<div className='nav-left'>
@@ -24,7 +28,7 @@ function Navigation({ isLoaded }) {
 					<NavLink to='/photos'>Photos</NavLink>
 				</span>
 				<span>
-					<NavLink to='/' >Registry</NavLink>
+					<div onClick={() => registry()}>Registry</div>
 				</span>
 			</div>
 			<div className='nav-right'>
