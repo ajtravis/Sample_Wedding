@@ -1,5 +1,13 @@
-export default function PhotoGallery() {
+import './PhotoGallery.css'
+
+export default function PhotoGallery({photos}) {
     return(
-        <div></div>
+        <div>{
+            photos?.map(pic => {
+                return <div>pic</div>
+            })}
+        </div>
     )
 }
+
+// todo: add pics
