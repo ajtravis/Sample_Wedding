@@ -43,7 +43,7 @@ function LocationPage() {
 					/>
 				</GoogleMapReact>
 			</div>
-			
+			<div>here you can list the wedding location and hotels that guests can stay at</div>
 		</div>
 	);
 }
