@@ -28,9 +28,9 @@ function SignupFormPage() {
   };
 
   return (
-    <>
-      <h1>Sign Up</h1>
-      <form onSubmit={handleSubmit}>
+    <div>
+      <h1>RSVP</h1>
+      <form id="rsvp-form" onSubmit={handleSubmit}>
         <ul>
           {errors.map((error, idx) => <li key={idx}>{error}</li>)}
         </ul>
@@ -62,7 +62,7 @@ function SignupFormPage() {
           />
         </label>
         <label>
-          Number of guests.
+          Number of guests
           <input
             type="number"
             min={0}
@@ -73,11 +73,12 @@ function SignupFormPage() {
           />
         </label>
         <textarea value={message}
+          placeholder="Got a message for the bride and groom? Leave it here!"
           onChange={(e) => setMessage(e.target.value)} />
 
         <button type="submit">submit</button>
       </form>
-    </>
+    </div>
   );
 }
 
