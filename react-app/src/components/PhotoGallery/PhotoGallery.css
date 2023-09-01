@@ -1,0 +1,15 @@
+#gallery-container{
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 1600px;
+    min-width: 320px;
+    width: 100%;
+    height: auto;
+    margin-top: 0.5em;
+    margin-bottom: 5em;;
+}
+
+.gallery-img{
+    width: 200px;
+    height: 200px;
+}
