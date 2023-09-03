@@ -1,7 +1,7 @@
 import './PhotoGallery.css'
 import { imageList } from './photoData'
 
-export default function PhotoGallery({photos}) {
+export default function PhotoGallery() {
     return(
         <div id='gallery-container'>{
             imageList?.map(pic => {
