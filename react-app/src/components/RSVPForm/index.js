@@ -4,7 +4,7 @@ import { Redirect } from "react-router-dom";
 import { signUp } from "../../store/session";
 import './SignupForm.css';
 
-function SignupFormPage() {
+function RSVPForm() {
   const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const [firstName, setFirstName] = useState("");
@@ -82,4 +82,4 @@ function SignupFormPage() {
   );
 }
 
-export default SignupFormPage;
+export default RSVPForm;
